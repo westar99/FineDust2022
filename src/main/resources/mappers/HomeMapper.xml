@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.domain.home.HomeMapper">
+
+	<!-- ku_tour 테이블 전체 컬럼 -->
+    <sql id="homeColumns">
+          id
+        , ku
+        , title
+        , content
+        , imgAddress
+        , kakaoAddress
+        
+    </sql>
+ 
+    <!-- 여행지 저장:db에 직접 넣으면 생략할 예정-->
+    <insert id="save" parameterType="com.study.domain.home.HomeRequest" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO ku_tour (
+            <include refid="homeColumns" />
+        ) VALUES (
+              #{id}
+            , #{ku}
+            , #{title}
+            , #{content}
+            , #{imgAddress}
+            , #{kakaoAddress}
+        )
+    </insert>
+    <!-- 여행지 각각의 정보 조회 -->
+    <select id="findByKu" parameterType="String" resultType="com.study.domain.home.HomeResponse">
+        SELECT
+            <include refid="homeColumns" />
+        FROM
+            ku_tour
+        WHERE
+            ku = #{value}
+    </select>
+
+     <!-- 여행지 리스트 조회 -->
+    <select id="findAll" resultType="com.study.domain.home.HomeResponse">
+        SELECT
+            <include refid="homeColumns" />
+        FROM
+            ku_tour
+        ORDER BY
+            id DESC
+    </select>
+    
+
+    
+  
+ 
+</mapper>

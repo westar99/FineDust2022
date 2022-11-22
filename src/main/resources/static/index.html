@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layout/basic"> 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/style.css}" >
+    <th:block layout:fragment="title">
+        <title>처음페이지</title>
+    </th:block>
+<body>
+  <h3>리스트로 가시려면 리스트를 눌러주세요.
+  <a href="/post/list.do">리스트</a>
+  </h3>
+  <h3>홈으로 가시려면 홈을 눌러주세요.
+  <a href="/home/home.do">홈</a>
+  </h3>
+</body>
+</html>
