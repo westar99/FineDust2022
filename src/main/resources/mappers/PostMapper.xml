@@ -152,7 +152,7 @@
     	SELECT
     		COUNT(*)
     	FROM
-    		TB_POST
+    		tb_post
     	WHERE
     		id = #{id} 
     		and
