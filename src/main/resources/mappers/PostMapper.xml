@@ -124,11 +124,11 @@
             tb_post
         WHERE
             delete_yn = 0
-            <include refid="search" />
+            
         ORDER BY
             created_date DESC
         LIMIT #{num}
-         <!-- MySQL에서 LIMIT 구문은 데이터를 원하는 만큼 가져오고 싶을 때 사용 --> 
+         <!-- MySQL에서 LIMIT 구문은 데이터를 원하는 만큼 가져오고 싶을 때 사용 <include refid="search" />--> 
     </select>
    
    <!-- 게시글 수 카운팅 -->
