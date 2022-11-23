@@ -27,7 +27,7 @@ public class HomeController {
 	
 	
 	  //홈화면. 여행지추천은 n개만 반환
-	  @GetMapping("/home/home.do") 
+	  @GetMapping("/")	  //home/home.do"
 	  public String homePage(@ModelAttribute("params") final SearchDto params,Model model) {
 		  List<PostResponse> response = postService.getSomePost(4);
 		  
@@ -73,7 +73,6 @@ public class HomeController {
 		    	//하나의 탭 만드는건 1번에서 했기 때문에
 		    return "home/ku"; 
 	  }
-
 
 	 
 }
