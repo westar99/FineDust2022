@@ -63,7 +63,7 @@ outer{
     left:0;right:0;margin: 0px auto ;
     OVERFLOW: hidden;
     width: 50vw;/* 50%로 함 */
-    HEIGHT: 57vh;/* 540px로 함 */
+    HEIGHT: 520px;/* 540px57vh로 함 */
     TOP: 10px; /* 10px를 위로 땡겨서 높이를 550px로 함 */
     border:2px solid #333 ;
     border-radius: 10px;
